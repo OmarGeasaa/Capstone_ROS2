@@ -1,0 +1,36 @@
+# config/config.yaml
+audio:
+  sample_rate: 16000
+  chunk_ms: 20
+  device_index: null
+
+stt:
+  model_path: "models/vosk-model-small-en-us-0.15"
+  confidence_min: 0.6
+  partial_results: true
+
+llm:
+  host: "http://localhost:11434"
+  model: "qwen3.5:4b"
+  timeout_sec: 60
+  max_tokens: 256
+  temperature: 0.5
+
+tts:
+  voice_name: "robot"
+  rate: 170
+  volume: 1.0
+
+robot:
+  sdk_enabled: false
+  gesture_on_speak: true
+
+face_recognition:
+  enabled: true
+  known_faces_dir: "D:\voice_recognition_model\faces"  # Change this to your folder path
+  model_path: "face_model.pkl"
+  confidence_threshold: 0.6
+  greeting_cooldown: 10
+  camera_id: 0
+  camera_width: 640
+  camera_height: 480
